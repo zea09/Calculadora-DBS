@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f6f7;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,297 +14,165 @@ body {
 .app {
     width: 430px;
     min-height: 650px;
-    background-color: #f8f9fa;
-    border: 1px solid #aaa;
-    position: relative;
+    background: white;
+    border: 1px solid #ccc;
     overflow: hidden;
 }
 .pantalla {
     display: none;
-    width: 100%;
     min-height: 650px;
 }
 .pantalla.activa {
     display: block;
 }
-.login-contenido,
-.registro-contenido {
-    width: 100%;
+.contenido {
     min-height: 650px;
-    padding: 35px 42px;
-    text-align: center;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .logo {
-    width: 155px;
-    height: 155px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: 22px;
     margin-bottom: 10px;
 }
-.login-contenido h1 {
-    font-size: 22px;
-    color: #222;
-    margin-bottom: 20px;
-}
-.registro-contenido h1 {
-    font-size: 22px;
-    color: #222;
-    margin-bottom: 8px;
-}
-.subtitulo {
-    font-size: 11px;
-    color: #555;
-    margin-bottom: 22px;
-}
-.login-contenido input,
-.registro-contenido input {
-    width: 100%;
-    height: 42px;
-    border: 1px solid #999;
-    border-radius: 6px;
-    padding: 0 12px;
-    margin-bottom: 17px;
-    outline: none;
+.contenido p {
     font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
 }
-.login-contenido input:focus,
-.registro-contenido input:focus {
-    border-color: #718579;
-}
-.boton-principal {
+.inputs {
     width: 100%;
-    height: 38px;
-    border: 1px solid #999;
-    border-radius: 6px;
-    background-color: white;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
 }
-.boton-principal:hover {
-    background-color: #eeeeee;
-}
-.texto-cuenta {
-    font-size: 10px;
-    color: #555;
-    margin: 20px 0 10px;
-}
-.boton-registro {
-    width: 210px;
-    height: 38px;
-    background-color: #c3cec6;
-    border: 1px solid #8d9991;
+.inputs input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
     border-radius: 5px;
-    font-size: 12px;
+}
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: white;
     font-weight: bold;
-    cursor: pointer;
 }
-.boton-registro:hover {
-    background-color: #b4c1b8;
+#btnLogin,
+#btnCrearCuenta {
+    width: 100%;
+    margin-bottom: 15px;
 }
-.mensaje {
-    font-size: 10px;
-    margin-top: 12px;
-    min-height: 14px;
-}
-.tipos {
-    display: flex;
-    gap: 15px;
-    margin: 8px 0 20px;
-}
-.tipo {
-    flex: 1;
-    height: 115px;
-    background-color: white;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #eee;
-}
-.tipo h3 {
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-.tipo p {
-    font-size: 9px;
-    color: #555;
-    line-height: 1.4;
-}
-.enlace {
-    border: none;
-    background: transparent;
-    color: #d69538;
-    font-size: 10px;
-    cursor: pointer;
+#btnRegistro,
+#btnVolverLogin {
+    width: 200px;
+    background: #c4d0c7;
 }
 .header {
-    height: 48px;
-    background-color: #c4d0c7;
+    height: 55px;
+    padding: 0 15px;
+    background: #c4d0c7;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 12px;
 }
 .header h1 {
-    font-size: 11px;
-    color: #222;
+    font-size: 14px;
+    margin: 0;
 }
-.boton-header {
+.header button {
     border: none;
-    background: transparent;
-    font-size: 19px;
-    cursor: pointer;
+    background: none;
+    font-size: 20px;
+    padding: 5px;
 }
 main {
     padding: 20px;
 }
 main h2 {
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
-.descripcion {
+main > p {
     text-align: center;
-    font-size: 10px;
     color: #777;
+    font-size: 12px;
     margin-bottom: 20px;
 }
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 10px;
 }
 .tarjeta {
-    border: 1px solid #ccc;
-    background-color: white;
-    border-radius: 5px;
     padding: 5px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.tarjeta:hover {
-    transform: scale(1.03);
-    box-shadow: 0 3px 10px #ccc;
+    background: white;
+    border: 1px solid #ccc;
 }
 .tarjeta img {
     width: 100%;
     height: 80px;
     object-fit: cover;
-    border-radius: 3px;
 }
 .tarjeta span {
     display: block;
-    font-size: 9px;
     margin-top: 5px;
-    color: #222;
+    font-size: 10px;
 }
 .calculadora {
-    padding-bottom: 30px;
+    padding: 20px;
 }
-.titulo-calculadora {
-    height: 48px;
-    background-color: #c4d0c7;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    gap: 10px;
-}
-.titulo-calculadora h2 {
-    font-size: 11px;
+.calculadora > h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
 }
 .volver {
+    background: none;
     border: none;
-    background-color: transparent;
-    font-size: 22px;
-    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
 }
-.calculadora > h3 {
-    font-size: 11px;
-    margin: 20px;
-}
-.opciones {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 15px 20px 25px;
-}
-.espesor {
-    width: 130px;
-    height: 100px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.espesor img {
-    width: 70px;
-    height: 55px;
-    object-fit: cover;
+.calculadora label {
     display: block;
-    margin: auto;
-}
-.espesor span {
-    display: block;
-    font-size: 10px;
-    margin-top: 5px;
-}
-.espesor.seleccionado {
-    border: 2px solid #829487;
-}
-label {
-    display: block;
-    font-size: 10px;
+    margin: 15px 0 5px;
+    font-size: 12px;
     font-weight: bold;
-    margin: 15px 20px;
 }
-input {
+.calculadora input {
     width: 100%;
-    height: 32px;
-    border: 1px solid #bbb;
-    border-radius: 4px;
-    padding: 5px 8px;
-    margin-top: 6px;
-    outline: none;
-    font-size: 11px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
 .calcular {
-    width: calc(100% - 40px);
-    height: 32px;
-    margin: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    background-color: #c4d0c7;
-    font-weight: bold;
-    font-size: 10px;
-    cursor: pointer;
+    width: 100%;
+    margin: 15px 0;
+    background: #c4d0c7;
 }
 .resultado {
-    margin: 20px;
     padding: 15px;
-    background-color: white;
+    background: #f5f5f5;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-.resultado h3 {
-    text-align: center;
-    font-size: 10px;
-    margin-bottom: 15px;
 }
 .resultado p {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-size: 9px;
     padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-.resultado p:last-child {
-    border-bottom: none;
-}
-.resultado strong {
-    font-size: 9px;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
 }

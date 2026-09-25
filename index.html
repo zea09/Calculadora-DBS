@@ -5,234 +5,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora DBS</title>
-    <link rel="shortcut icon" href="img/icono.jpg">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="app">
-        <section class="pantalla activa" id="login">
-            <div class="login-contenido">
-                <img src="img/construccion.png" alt="Calculadora DBS" class="logo">
+        <section id="login" class="pantalla activa">
+            <div class="contenido">
+                <img src="img/construccion.png" alt="Logo Calculadora DBS" class="logo">
                 <h1>CALCULADORA DBS</h1>
-                <p class="subtitulo">Inicia sesión para continuar</p>
-                <input type="text" id="loginUsuario" placeholder="Usuario">
-                <input type="password" id="loginPassword" placeholder="Contraseña">
-                <button id="btnLogin" class="boton-principal">INICIAR SESIÓN</button>
-                <p class="texto-cuenta">¿No tienes cuenta?</p>
-                <button id="btnRegistro" class="boton-registro">REGISTRARSE</button>
-                <p id="mensajeLogin" class="mensaje"></p>
-            </div>
-        </section>
-        <section class="pantalla" id="registro">
-            <div class="registro-contenido">
-                <h1>CREAR CUENTA</h1>
-                <p class="subtitulo">Completa los datos para registrarte</p>
-                <input type="text" id="registroUsuario" placeholder="Nombre de usuario">
-                <input type="password" id="registroPassword" placeholder="Contraseña">
-                <input type="password" id="registroConfirmar" placeholder="Confirmar contraseña">
-                <div class="tipos">
-                    <div class="tipo">
-                        <h3>Usuario</h3>
-                        <p>
-                            Puede realizar
-                            cálculos de
-                            materiales
-                        </p>
-                    </div>
-                    <div class="tipo">
-                        <h3>Administrador</h3>
-                        <p>Acceso completo
-                            y gestión de
-                            usuarios</p>
-                    </div>
+                <p>Inicia sesión para continuar</p>
+                <div class="inputs">
+                    <input type="text" id="loginUsuario" placeholder="Usuario">
+                    <input type="password" id="loginPassword" placeholder="Contraseña">
                 </div>
-                <button id="btnCrearCuenta" class="boton-principal">CREAR CUENTA</button>
-                <p class="texto-cuenta">
-                    ¿Ya tienes una cuenta?
-                    <button id="btnVolverLogin" class="enlace">Inicia Sesión</button>
-                </p>
-                <p id="mensajeRegistro" class="mensaje"></p>
+                <button id="btnLogin">INICIAR SESIÓN</button>
+                <p>¿No tienes una cuenta?</p>
+                <button id="btnRegistro">REGISTRARSE</button>
             </div>
         </section>
-        <section class="pantalla" id="menu">
+        <section id="registro" class="pantalla">
+            <div class="contenido">
+                <h1>CREAR CUENTA</h1>
+                <p>Completa los siguientes datos</p>
+                <div class="inputs">
+                    <input type="text" id="registroUsuario" placeholder="Usuario">
+                    <input type="password" id="registroPassword" placeholder="Contraseña">
+                    <input type="password" id="registroConfirmar" placeholder="Confirmar contraseña">
+                </div>
+                <button id="btnCrearCuenta">CREAR CUENTA</button>
+                <p>¿Ya tienes una cuenta?</p>
+                <button id="btnVolverLogin">INICIAR SESIÓN</button>
+            </div>
+        </section>
+        <section id="menu" class="pantalla">
             <header class="header">
-                <button id="btnSalir" class="boton-header"><ion-icon name="arrow-back-outline"></ion-icon></button>
-                <h1>BIENVENIDO, <span id="nombreUsuario"></span></h1>
-                <button class="boton-header"><ion-icon name="menu-outline"></ion-icon></button>
+                <button id="btnSalir">←</button>
+                <h1>BIENVENIDO</h1>
+                <button>☰</button>
             </header>
             <main>
-                <h2>MENU PRINCIPAL</h2>
-                <p class="descripcion">Selecciona una opción para calcular</p>
-                <section class="tarjetas">
+                <h2>MENÚ PRINCIPAL</h2>
+                <p>Selecciona una opción</p>
+                <div class="tarjetas">
                     <button class="tarjeta" data-pantalla="muro">
                         <img src="img/muro.jpg" alt="Muro">
-                        <span>Muro de Ladrillo</span>
+                        <span>MURO</span>
                     </button>
                     <button class="tarjeta" data-pantalla="viga">
                         <img src="img/viga.jpg" alt="Viga">
-                        <span>Viga de Hormigón</span>
+                        <span>VIGA</span>
                     </button>
                     <button class="tarjeta" data-pantalla="columna">
                         <img src="img/columna.jpg" alt="Columna">
-                        <span>Columna de Hormigón</span>
+                        <span>COLUMNA</span>
                     </button>
                     <button class="tarjeta" data-pantalla="contrapiso">
                         <img src="img/contrapiso.jpg" alt="Contrapiso">
-                        <span>Contrapiso</span>
+                        <span>CONTRAPISO</span>
                     </button>
                     <button class="tarjeta" data-pantalla="techo">
                         <img src="img/techo.jpg" alt="Techo">
-                        <span>Techo</span>
+                        <span>TECHO</span>
                     </button>
                     <button class="tarjeta" data-pantalla="piso">
-                        <img src="img/pisos.jpg" alt="Pisos">
-                        <span>Pisos</span>
+                        <img src="img/pisos.jpg" alt="Piso">
+                        <span>PISO</span>
                     </button>
                     <button class="tarjeta" data-pantalla="pintura">
                         <img src="img/pintura.jpg" alt="Pintura">
-                        <span>Pintura</span>
+                        <span>PINTURA</span>
                     </button>
-                    <button class="tarjeta" id="cerrarSesion">
+                    <button id="cerrarSesion" class="tarjeta">
                         <img src="img/cerrar sesion.jpg" alt="Cerrar sesión">
-                        <span>Cerrar Sesión</span>
+                        <span>SALIR</span>
                     </button>
-                </section>
+                </div>
             </main>
         </section>
-        <section class="pantalla calculadora" id="muro">
-            <div class="titulo-calculadora">
-                <button class="volver">←</button>
-                <h2>CALCULAR MURO DE LADRILLO</h2>
-            </div>
-            <h3>1. Selecciona el espesor del muro</h3>
-            <div class="opciones">
-                <button class="espesor seleccionado">
-                    <img src="img/muro.jpg" alt="10 cm">
-                    <span>10 cm</span>
-                </button>
-                <button class="espesor">
-                    <img src="img/muro.jpg" alt="20 cm">
-                    <span>20 cm</span>
-                </button>
-            </div>
-            <h3>2. Ingrese las dimensiones</h3>
-            <label>Largo del muro (m)<input type="number" id="muroLargo" value="3"></label>
-            <label>Alto del muro (m)<input type="number" id="muroAlto" value="2.5"></label>
+        <section id="muro" class="pantalla calculadora">
+            <button class="volver">← VOLVER</button>
+            <h2>MURO DE LADRILLO</h2>
+            <label>Largo</label>
+            <input type="number" id="muroLargo" value="3">
+            <label>Alto</label>
+            <input type="number" id="muroAlto" value="2.5">
             <button class="calcular" id="calcularMuro">CALCULAR</button>
             <div class="resultado">
-                <h3>RESULTADO</h3>
-                <p>Área del muro<strong id="resultadoMuro">0 m²</strong>
-                </p>
-                <p>Ladrillos<strong id="ladrillos">0</strong>
-                </p>
-                <p>Cemento<strong id="cementoMuro">0 kg</strong></p>
-                <p>Arena<strong id="arenaMuro">0 m³</strong></p>
+                <p>Área: <strong id="resultadoMuro">0 m²</strong></p>
+                <p>Ladrillos: <strong id="ladrillos">0</strong></p>
+                <p>Cemento: <strong id="cementoMuro">0 kg</strong></p>
+                <p>Arena: <strong id="arenaMuro">0 m³</strong></p>
             </div>
         </section>
-        <section class="pantalla calculadora" id="viga">
-            <div class="titulo-calculadora">
-                <button class="volver"><ion-icon name="arrow-back-outline"></ion-icon></button>
-                <h2>CALCULAR VIGA DE HORMIGÓN</h2>
-            </div>
-            <h3>1. Selecciona el largo de la viga</h3>
-            <label>Largo de la viga (m)<input type="number" id="vigaLargo" value="6"></label>
+        <section id="viga" class="pantalla calculadora">
+            <button class="volver">← VOLVER</button>
+            <h2>VIGA</h2>
+            <label>Largo</label>
+            <input type="number" id="vigaLargo" value="6">
             <button class="calcular" id="calcularViga">CALCULAR</button>
             <div class="resultado">
-                <h3>MATERIALES NECESARIOS</h3>
-                <p>Cemento<strong id="vigaCemento">0 kg</strong></p>
-                <p>Arena<strong id="vigaArena">0 m³</strong></p>
-                <p>Piedra<strong id="vigaPiedra">0 m³</strong></p>
-                <p>Hierro del 10<strong id="vigaHierro10">0 m</strong></p>
-                <p>Hierro del 4<strong id="vigaHierro4">0 m</strong></p>
+                <p>Cemento: <strong id="vigaCemento">0 kg</strong></p>
+                <p>Arena: <strong id="vigaArena">0 m³</strong></p>
+                <p>Piedra: <strong id="vigaPiedra">0 m³</strong></p>
             </div>
         </section>
-        <section class="pantalla calculadora" id="columna">
-            <div class="titulo-calculadora">
-                <button class="volver">←</button>
-                <h2>CALCULAR COLUMNA</h2>
-            </div>
-            <h3>1. Ingrese el largo de la columna</h3>
-            <label>Largo de la columna (m)<input type="number" id="columnaLargo" value="5"></label>
+        <section id="columna" class="pantalla calculadora">
+            <button class="volver">← VOLVER</button>
+            <h2>COLUMNA</h2>
+            <input type="number" id="columnaLargo" value="5">
             <button class="calcular" id="calcularColumna">CALCULAR</button>
             <div class="resultado">
-                <h3>MATERIALES NECESARIOS</h3>
-                <p>Cemento<strong id="columnaCemento">0 kg</strong></p>
-                <p>Arena<strong id="columnaArena">0 m³</strong></p>
-                <p>Piedra<strong id="columnaPiedra">0 m³</strong></p>
-                <p>Hierro del 10<strong id="columnaHierro10">0 m</strong></p>
-                <p>Hierro del 4<strong id="columnaHierro4">0 m</strong></p>
+                <p>Cemento: <strong id="columnaCemento">0 kg</strong></p>
+                <p>Arena: <strong id="columnaArena">0 m³</strong></p>
+                <p>Piedra: <strong id="columnaPiedra">0 m³</strong></p>
             </div>
         </section>
-        <section class="pantalla calculadora" id="contrapiso">
-            <div class="titulo-calculadora">
-                <button class="volver"><ion-icon name="arrow-back-outline"></ion-icon></button>
-                <h2>CALCULAR CONTRAPISO</h2>
-            </div>
-            <label>Espesor (m)<input type="number" id="espesor" value="0.10"></label>
-            <label>Ancho (m)<input type="number" id="ancho" value="2.50"></label>
-            <label>Largo (m)<input type="number" id="largo" value="5"> </label>
+        <section id="contrapiso" class="pantalla calculadora">
+            <button class="volver">← VOLVER</button>
+            <h2>CONTRAPISO</h2>
+            <label>Espesor</label>
+            <input type="number" id="espesor" value="0.10">
+            <label>Ancho</label>
+            <input type="number" id="ancho" value="2.50">
+            <label>Largo</label>
+            <input type="number" id="largo" value="5">
             <button class="calcular" id="calcularContrapiso">CALCULAR</button>
             <div class="resultado">
-                <h3>RESULTADO</h3>
-                <p>Volumen<strong id="volumen">0 m³</strong></p>
-                <p>Cemento<strong id="contraCemento">0 kg</strong></p>
-                <p>Arena<strong id="contraArena">0 m³</strong>
-                </p>
-                <p>Piedra<strong id="contraPiedra">0 m³</strong></p>
+                <p>Volumen: <strong id="volumen">0 m³</strong></p>
+                <p>Cemento: <strong id="contraCemento">0 kg</strong></p>
+                <p>Arena: <strong id="contraArena">0 m³</strong></p>
+                <p>Piedra: <strong id="contraPiedra">0 m³</strong></p>
             </div>
         </section>
-        <section class="pantalla calculadora" id="techo">
-            <div class="titulo-calculadora">
-                <button class="volver">←</button>
-                <h2>CALCULAR TECHO</h2>
-            </div>
-            <label>Metros cuadrados<input type="number" id="metrosTecho" value="2"></label>
+        <section id="techo" class="pantalla calculadora">
+            <button class="volver">← VOLVER</button>
+            <h2>TECHO</h2>
+            <label>Metros cuadrados</label>
+            <input type="number" id="metrosTecho" value="2">
             <button class="calcular" id="calcularTecho">CALCULAR</button>
             <div class="resultado">
-                <h3>RESULTADO</h3>
-                <p>Cemento<strong id="techoCemento">0 kg</strong></p>
-                <p>Arena<strong id="techoArena">0 m³</strong></p>
-                <p>Hierro del 8 <strong id="techoHierro8">0 m</strong></p>
-                <p>Hierro del 6 <strong id="techoHierro6">0 m</strong>
-                </p>
+                <p>Cemento: <strong id="techoCemento">0 kg</strong></p>
+                <p>Arena: <strong id="techoArena">0 m³</strong></p>
             </div>
         </section>
-        <section class="pantalla calculadora" id="piso">
-            <div class="titulo-calculadora">
-                <button class="volver">
-                    <ion-icon name="arrow-back-outline"></ion-icon>
-                </button>
-                <h2>CALCULAR PISO</h2>
-            </div>
-            <label>Ancho (m)<input type="number" id="pisoAncho" value="2"></label>
-            <label>Largo (m)<input type="number" id="pisoLargo" value="3"></label>
+        <section id="piso" class="pantalla calculadora">
+            <button class="volver">← VOLVER</button>
+            <h2>PISO</h2>
+            <label>Ancho</label>
+            <input type="number" id="pisoAncho" value="2">
+            <label>Largo</label>
+            <input type="number" id="pisoLargo" value="3">
             <button class="calcular" id="calcularPiso">CALCULAR</button>
             <div class="resultado">
-                <h3>RESULTADO</h3>
-                <p>Área <strong id="areaPiso">0 m²</strong>
-                </p>
-                <p>Con 10% extra<strong id="extraPiso">0 m²</strong></p>
+                <p>Área: <strong id="areaPiso">0 m²</strong></p>
+                <p>10% extra: <strong id="extraPiso">0 m²</strong></p>
             </div>
         </section>
-        <section class="pantalla calculadora" id="pintura">
-            <div class="titulo-calculadora">
-                <button class="volver">←</button>
-                <h2>CALCULAR PINTURA</h2>
-            </div>
-            <label>Metros cuadrados<input type="number" id="metrosPintura" value="6"></label>
+        <section id="pintura" class="pantalla calculadora">
+            <button class="volver">← VOLVER</button>
+            <h2>PINTURA</h2>
+            <label>Metros cuadrados</label>
+            <input type="number" id="metrosPintura" value="6">
             <button class="calcular" id="calcularPintura">CALCULAR</button>
             <div class="resultado">
-                <h3>RESULTADO</h3>
-                <p>Superficie del muro<strong id="superficie">0 m²</strong></p>
-                <p>Litros de pintura<strong id="litros">0 L</strong></p>
+                <p>Superficie: <strong id="superficie">0 m²</strong></p>
+                <p>Litros: <strong id="litros">0 L</strong></p>
             </div>
         </section>
     </div>
     <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>
